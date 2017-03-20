@@ -1,0 +1,13 @@
+h2 customer.full_name
+-unless customer.image.nil?
+  = image_tag customer.image
+p 
+  - unless customer.phone.nil?
+    strong> Phone:
+      = customer.phone 
+  - unless customer.email.nil?
+    strong> Email:
+      = customer.email
+  - unless customer.notes.nil?
+    strong> Notes:
+      = customer.notes
