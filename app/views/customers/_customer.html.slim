@@ -1,13 +1,35 @@
-h2 customer.full_name
--unless customer.image.nil?
-  = image_tag customer.image
-p 
-  - unless customer.phone.nil?
-    strong> Phone:
-      = customer.phone 
-  - unless customer.email.nil?
-    strong> Email:
-      = customer.email
-  - unless customer.notes.nil?
-    strong> Notes:
-      = customer.notes
+/ .col
+/   h2 = customer.full_name
+/   p 
+/     strong> Phone:
+/       = customer.phone 
+/   p
+/     strong> Email:
+/       = customer.email
+/   p
+/     strong> Notes:
+/       = customer.notes
+.col-4
+  .customer
+    h4
+      b = customer.full_name
+    - unless customer.image.empty?
+      = image_tag customer.image
+    br
+    br
+    h6
+      - unless customer.phone.empty? 
+        p 
+          strong> Phone: 
+          = customer.phone
+    h6      
+      - unless customer.email.empty?
+        p 
+          strong> Email:
+          =customer.email
+    h6      
+      - unless customer.notes.empty?
+        p 
+          strong> Notes:
+          =customer.notes
+      

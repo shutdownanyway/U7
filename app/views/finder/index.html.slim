@@ -1,0 +1,11 @@
+
+/!= stylesheet_link_tag "customer.scss"
+/!link rel="stylesheet" type="text/css" href="assets/stylesheets/customer.scss"
+.container
+  h1 
+    b All Customers
+  a = link_to 'Alphabetized Customers', customers_alphabetized_path 
+  span  - 
+  a = link_to 'Missing Emails', customers_missing_email_path
+  .row
+    = render partial: 'customers/customer', collection: @customers

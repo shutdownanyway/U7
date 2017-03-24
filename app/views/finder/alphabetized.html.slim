@@ -1,0 +1,6 @@
+.container
+  h1 
+    b Customers Alphabetized
+  p = link_to 'Home', finder_path
+  .row
+    = render partial: 'customers/customer', collection: @customers_alphabetized
