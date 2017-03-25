@@ -32,4 +32,12 @@
         p 
           strong> Notes:
           =customer.notes
+    h6
+      p 
+        strong Province: 
+        - if customer.province.present?
+          = customer.province.name 
+        - else
+          | None
+
       
